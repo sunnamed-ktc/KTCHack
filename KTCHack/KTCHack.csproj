@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FA49BEB-FD04-42E3-BDDD-C91B74059AE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KTCHack</RootNamespace>
+    <AssemblyName>KTCHack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\Age\KTCTechonology.cs" />
+    <Compile Include="Core\Enemy\KTCEnemyManager.cs" />
+    <Compile Include="Core\Enemy\KTCEnemySpawner.cs" />
+    <Compile Include="Core\GUI\KTCGUIMenu.cs" />
+    <Compile Include="Core\Helper\KTCHelp.cs" />
+    <Compile Include="Core\KTCCastle.cs" />
+    <Compile Include="Core\KTCGame.cs" />
+    <Compile Include="Core\KTCInput.cs" />
+    <Compile Include="Core\KTCPlayer.cs" />
+    <Compile Include="Core\KTCWallet.cs" />
+    <Compile Include="Injection.cs" />
+    <Compile Include="KTCHack.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>lib\0Harmony.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>lib\Assembly-CSharp.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>lib\Assembly-CSharp-firstpass.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ConsoleUtilsImport">
+      <HintPath>lib\ConsoleUtilsImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DataPlatformImport">
+      <HintPath>lib\DataPlatformImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>lib\DemiLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>lib\DOTween.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>lib\DOTween43.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>lib\DOTween46.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>lib\DOTween50.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>lib\DOTweenPro.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FriendsImport">
+      <HintPath>lib\FriendsImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="GameDVRImport">
+      <HintPath>lib\GameDVRImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="GamepadImport">
+      <HintPath>lib\GamepadImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Haglet-Assembly-CSharp-02">
+      <HintPath>lib\Haglet-Assembly-CSharp-02.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="HardwareVideoImport">
+      <HintPath>lib\HardwareVideoImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MarketplaceImport">
+      <HintPath>lib\MarketplaceImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>lib\Mono.Security.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MultiplayerImport">
+      <HintPath>lib\MultiplayerImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>lib\Rewired_Core.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Rewired_Windows_Lib">
+      <HintPath>lib\Rewired_Windows_Lib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SmartGlassImport">
+      <HintPath>lib\SmartGlassImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SonyNP">
+      <HintPath>lib\SonyNP.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SonyPS4CommonDialog">
+      <HintPath>lib\SonyPS4CommonDialog.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SonyPS4SaveData">
+      <HintPath>lib\SonyPS4SaveData.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SonyPS4SavedGames">
+      <HintPath>lib\SonyPS4SavedGames.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="StorageImport">
+      <HintPath>lib\StorageImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="StreamingInstallImport">
+      <HintPath>lib\StreamingInstallImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="TextSystemsImport">
+      <HintPath>lib\TextSystemsImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>lib\Unity.Analytics.DataPrivacy.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>lib\Unity.Analytics.StandardEvents.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>lib\Unity.Analytics.Tracker.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>lib\Unity.TextMeshPro.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>lib\Unity.VectorGraphics.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>lib\UnityEngine.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>lib\UnityEngine.AccessibilityModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>lib\UnityEngine.AIModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>lib\UnityEngine.AnimationModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>lib\UnityEngine.ARModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>lib\UnityEngine.AssetBundleModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>lib\UnityEngine.AudioModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>lib\UnityEngine.BaselibModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>lib\UnityEngine.ClothModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>lib\UnityEngine.ClusterInputModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>lib\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>lib\UnityEngine.CrashReportingModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>lib\UnityEngine.DirectorModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>lib\UnityEngine.FileSystemHttpModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>lib\UnityEngine.GameCenterModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>lib\UnityEngine.GridModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>lib\UnityEngine.HotReloadModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>lib\UnityEngine.ImageConversionModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>lib\UnityEngine.IMGUIModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>lib\UnityEngine.InputModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>lib\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>lib\UnityEngine.LocalizationModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>lib\UnityEngine.Networking.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>lib\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>lib\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>lib\UnityEngine.Physics2DModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>lib\UnityEngine.PhysicsModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>lib\UnityEngine.ProfilerModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>lib\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>lib\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>lib\UnityEngine.SpatialTracking.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>lib\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>lib\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>lib\UnityEngine.StreamingModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>lib\UnityEngine.StyleSheetsModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>lib\UnityEngine.SubstanceModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>lib\UnityEngine.TerrainModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>lib\UnityEngine.TextCoreModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>lib\UnityEngine.TextRenderingModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>lib\UnityEngine.TilemapModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>lib\UnityEngine.Timeline.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>lib\UnityEngine.TimelineModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>lib\UnityEngine.TLSModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>lib\UnityEngine.UI.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>lib\UnityEngine.UIElementsModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>lib\UnityEngine.UIModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>lib\UnityEngine.UmbraModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>lib\UnityEngine.UNETModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>lib\UnityEngine.UnityConnectModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>lib\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>lib\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>lib\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>lib\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>lib\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>lib\UnityEngine.VehiclesModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>lib\UnityEngine.VFXModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>lib\UnityEngine.VideoModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>lib\UnityEngine.VRModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>lib\UnityEngine.WindModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>lib\UnityEngine.XRModule.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UnityEtx">
+      <HintPath>lib\UnityEtx.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="UsersImport">
+      <HintPath>lib\UsersImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="XboxOneCommonImport">
+      <HintPath>lib\XboxOneCommonImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="XIMImport">
+      <HintPath>lib\XIMImport.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="XInputDotNetPure">
+      <HintPath>lib\XInputDotNetPure.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
