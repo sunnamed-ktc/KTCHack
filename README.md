@@ -7,7 +7,7 @@ This is my first cheat and experience with injecting. Be careful when you using 
 ### Hotkeys
 ## Tab - Uninject cheat.
 ## Z - Adding + 30 coins.
-X - Adding + 3 gems.
+*X - Adding + 3 gems.
 C - Updgrade castle. (bad working)
 V - Updgrade towers.
 CapsLock - Open/Close cheat menu.
