@@ -1,5 +1,7 @@
-﻿using KTCHack.Core.Enemy;
+﻿using KTCHack.Core.BeggarCamping;
+using KTCHack.Core.Enemy;
 using KTCHack.Core.GUI;
+using KTCHack.Core.Kingdomm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +46,11 @@ namespace KTCHack.Core
             if (Input.GetKeyDown(KeyCode.V))
             {
                 KTCCastle.UpgradeTowers();
+            }
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                KTCBeggarCamping.SpawnBeggar();
             }
 
             if (Input.GetKeyDown(KeyCode.CapsLock))

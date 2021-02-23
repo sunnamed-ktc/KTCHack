@@ -1,19 +1,11 @@
 ﻿using KTCHack.Core;
 using KTCHack.Core.Age;
+using KTCHack.Core.BeggarCamping;
 using KTCHack.Core.Enemy;
 using KTCHack.Core.GUI;
 using KTCHack.Core.Helper;
-using Rewired;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using KTCHack.Core.Kingdomm;
 using UnityEngine;
-using static Rewired.ReInput;
 
 namespace KTCHack
 {
@@ -43,6 +35,8 @@ namespace KTCHack
             Instance.AddComponent<KTCEnemyManager>();
             Instance.AddComponent<KTCEnemySpawner>();
             Instance.AddComponent<KTCTechonology>();
+            Instance.AddComponent<KTCKingdom>();
+            Instance.AddComponent<KTCBeggarCamping>();
         }
 
 
@@ -56,6 +50,8 @@ namespace KTCHack
             KTCGUIMenu.Check();
 
             KTCGUIMenu.Show();
+
+            KTCBeggarCamping.Debugger.ShowDebuggerContent();
         }
     }
 }

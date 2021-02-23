@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KTCHack.Core.GUI;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,9 +40,9 @@ namespace KTCHack.Core
 
         public static void ChangeSpeedMultiplier(float value = 15f)
         {
-            float lastSpeed = (float)typeof(Player)?.GetField("_multiplier", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(Player);
+            float lastSpeed = (float)Player?.GetType().GetField("_multiplier", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(Player);
 
-            typeof(Player)?.GetField("_multiplier", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(Player, (lastSpeed + value));
+            Player?.GetType().GetField("_multiplier", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(Player, (lastSpeed + value));
         }
     }
 }

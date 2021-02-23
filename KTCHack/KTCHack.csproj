@@ -32,10 +32,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Core\Age\KTCTechonology.cs" />
+    <Compile Include="Core\BeggarCamping\KTCBeggarCamping.cs" />
     <Compile Include="Core\Enemy\KTCEnemyManager.cs" />
     <Compile Include="Core\Enemy\KTCEnemySpawner.cs" />
+    <Compile Include="Core\GUI\GUIDebugger.cs" />
+    <Compile Include="Core\GUI\GUIHelper.cs" />
     <Compile Include="Core\GUI\KTCGUIMenu.cs" />
     <Compile Include="Core\Helper\KTCHelp.cs" />
+    <Compile Include="Core\Kingdom\KTCKingdom.cs" />
     <Compile Include="Core\KTCCastle.cs" />
     <Compile Include="Core\KTCGame.cs" />
     <Compile Include="Core\KTCInput.cs" />
