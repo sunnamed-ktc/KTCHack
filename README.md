@@ -10,6 +10,8 @@ This is my first cheat and experience with injecting. Be careful when you using 
 ## X - Adding + 3 gems.
 ## C - Updgrade castle. (bad working)
 ## V - Updgrade towers.
+## B - Spawning beggars on every camping.
+
 ## CapsLock - Open/Close cheat menu.
 
 
