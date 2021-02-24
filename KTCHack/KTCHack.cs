@@ -15,10 +15,20 @@ namespace KTCHack
 
 
 
-        // if u want to write, like debug, something add in (Y + 20)
-        // Ex`s:
-        // Example: GUI.Label(new Rect(10, 10, 200, 40), "This is debu # 1!");
-        // Example: GUI.Label(new Rect(10, 30, 200, 40), "This is debug # 2!");
+        private void OnGUI()
+        {
+            #region Old Help Menu (only text)
+            /*KTCHelp.Submit();*/
+            #endregion
+
+            KTCGUIMenu.Check();
+
+            KTCGUIMenu.Show();
+
+            KTCBeggarCamping.Debugger.ShowContent();
+        }
+
+
 
         public static void Initialize()
         {
@@ -37,21 +47,6 @@ namespace KTCHack
             Instance.AddComponent<KTCTechonology>();
             Instance.AddComponent<KTCKingdom>();
             Instance.AddComponent<KTCBeggarCamping>();
-        }
-
-
-
-        private void OnGUI()
-        {
-            #region Old Help Menu (only text)
-            /*KTCHelp.Submit();*/
-            #endregion
-
-            KTCGUIMenu.Check();
-
-            KTCGUIMenu.Show();
-
-            KTCBeggarCamping.Debugger.ShowDebuggerContent();
         }
     }
 }

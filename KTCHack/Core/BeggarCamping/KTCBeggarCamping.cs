@@ -33,20 +33,25 @@ namespace KTCHack.Core.BeggarCamping
                 Camping = FindObjectOfType<BeggarCamp>();
             }
 
-            Debugger.ChangeDebuggerContent($"{Debugger.FirstContent} {FindObjectsOfType<Beggar>().Length}");
+            Debugger.TryJoinContentAndChange(FindObjectsOfType<Beggar>().Length.ToString());
         }
 
 
 
-        public static void SpawnBeggar(int count = 1)
+        public static void SpawnBeggarsOnCamping()
         {
-            for (int i = 0; i < count; i++)
+            foreach (BeggarCamp beggar in FindObjectsOfType<BeggarCamp>())
             {
-                Camping?.GetType().GetMethod("SpawnBeggar", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(Camping, null);
+                TrySpecificallySpawnOne(beggar);
             }
         }
 
-        public static void SpawnBeggar()
+        public static void TrySpecificallySpawnOne(BeggarCamp camping)
+        {
+            camping?.GetType().GetMethod("SpawnBeggar", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(camping, null);
+        }
+
+        public static void TrySpawnOne()
         {
             Camping?.GetType().GetMethod("SpawnBeggar", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(Camping, null);
         }

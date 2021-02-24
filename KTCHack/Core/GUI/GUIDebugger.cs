@@ -29,14 +29,35 @@ namespace KTCHack.Core.GUI
 
 
 
-        public void ShowDebuggerContent()
+        public void ShowContent()
         {
-            UnityEngine.GUI.Label(new Rect(20, TextPositionY, 160, 20), Content);
+            UnityEngine.GUI.Label(new Rect(20, TextPositionY, 400, 400), Content);
         }
 
-        public void ChangeDebuggerContent(string text)
+        public void ChangeContent(string text)
         {
             Content = text;
+        }
+
+        public bool TryJoinContentAndChange(string text, bool useSplit = true)
+        {
+            if (string.IsNullOrEmpty(FirstContent))
+            {
+                ChangeContent(text);
+
+                return false;
+            }
+
+            if (useSplit)
+            {
+                Content = (FirstContent + " " + text);
+            }
+            else
+            {
+                Content = (FirstContent + text);
+            }
+
+            return true;
         }
     }
 }

@@ -50,7 +50,7 @@ namespace KTCHack.Core
 
             if (Input.GetKeyDown(KeyCode.B))
             {
-                KTCBeggarCamping.SpawnBeggar();
+                KTCBeggarCamping.SpawnBeggarsOnCamping();
             }
 
             if (Input.GetKeyDown(KeyCode.CapsLock))

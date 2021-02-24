@@ -29,7 +29,7 @@ namespace KTCHack.Core.Enemy
             Manager?.StartRedMoon();
         }
 
-        public static void ClearRedMoon()
+        public static void TryClearRedMoon()
         {
             Manager?.GetType().GetMethod("ClearRedMoon", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(Manager, null);
         }

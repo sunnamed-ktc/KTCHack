@@ -89,7 +89,12 @@ namespace KTCHack.Core.GUI
                     KTCPlayer.ChangeSpeedMultiplier(3);
                 }
 
-                if (UnityEngine.GUI.Button(new Rect(20, 370, 160, 20), "Uninject hack (Tab)"))
+                if (UnityEngine.GUI.Button(new Rect(20, 370, 160, 20), "Spawn Beggar (B)"))
+                {
+                    BeggarCamping.KTCBeggarCamping.SpawnBeggarsOnCamping();
+                }
+
+                if (UnityEngine.GUI.Button(new Rect(20, 400, 160, 20), "Uninject hack (Tab)"))
                 {
                     Injection.UnInject();
                 }
