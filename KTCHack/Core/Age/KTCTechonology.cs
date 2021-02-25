@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KTCHack.Core.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using UnityEngine;
 
 namespace KTCHack.Core.Age
 {
+    [RequiredComponent]
     public class KTCTechonology : MonoBehaviour
     {
         public static KTCTechonology Instance;
@@ -39,7 +41,7 @@ namespace KTCHack.Core.Age
 
 
 
-        // Not working, game is checking if u unlocked techonology
+        // Not working, game checking if u unlocked techonology
         public static void Set(TechnologyAge age)
         {
             Segment?.SetAge(age);

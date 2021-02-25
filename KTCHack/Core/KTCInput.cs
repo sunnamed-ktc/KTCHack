@@ -1,4 +1,5 @@
-﻿using KTCHack.Core.BeggarCamping;
+﻿using KTCHack.Core.Attributes;
+using KTCHack.Core.BeggarCamping;
 using KTCHack.Core.Enemy;
 using KTCHack.Core.GUI;
 using KTCHack.Core.Kingdomm;
@@ -11,6 +12,7 @@ using UnityEngine;
 
 namespace KTCHack.Core
 {
+    [RequiredComponent]
     public class KTCInput : MonoBehaviour
     {
         public static KTCInput Instance;
@@ -38,21 +40,25 @@ namespace KTCHack.Core
                 KTCWallet.AddGems();
             }
 
+            // update castle
             if (Input.GetKeyDown(KeyCode.C))
             {
                 KTCCastle.UpgradeCastle(false);
             }
 
+            // update towers
             if (Input.GetKeyDown(KeyCode.V))
             {
                 KTCCastle.UpgradeTowers();
             }
 
+            // Spawn beggars
             if (Input.GetKeyDown(KeyCode.B))
             {
                 KTCBeggarCamping.SpawnBeggarsOnCamping();
             }
 
+            // open/close menu
             if (Input.GetKeyDown(KeyCode.CapsLock))
             {
                 KTCGUIMenu.Native();

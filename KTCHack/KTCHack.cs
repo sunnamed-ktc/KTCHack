@@ -1,10 +1,13 @@
 ﻿using KTCHack.Core;
 using KTCHack.Core.Age;
+using KTCHack.Core.Attributes;
 using KTCHack.Core.BeggarCamping;
 using KTCHack.Core.Enemy;
 using KTCHack.Core.GUI;
 using KTCHack.Core.Helper;
 using KTCHack.Core.Kingdomm;
+using System;
+using System.Reflection;
 using UnityEngine;
 
 namespace KTCHack
@@ -17,10 +20,6 @@ namespace KTCHack
 
         private void OnGUI()
         {
-            #region Old Help Menu (only text)
-            /*KTCHelp.Submit();*/
-            #endregion
-
             KTCGUIMenu.Check();
 
             KTCGUIMenu.Show();
@@ -36,17 +35,13 @@ namespace KTCHack
 
             GameObject.DontDestroyOnLoad(Instance);
 
-            Instance.AddComponent<KTCPlayer>();
-            Instance.AddComponent<KTCCastle>();
-            Instance.AddComponent<KTCHelp>();
-            Instance.AddComponent<KTCWallet>();
-            Instance.AddComponent<KTCGame>();
-            Instance.AddComponent<KTCInput>();
-            Instance.AddComponent<KTCEnemyManager>();
-            Instance.AddComponent<KTCEnemySpawner>();
-            Instance.AddComponent<KTCTechonology>();
-            Instance.AddComponent<KTCKingdom>();
-            Instance.AddComponent<KTCBeggarCamping>();
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                if (type.IsDefined(typeof(RequiredComponent), false))
+                {
+                    Instance.AddComponent(type);
+                }
+            }
         }
     }
 }

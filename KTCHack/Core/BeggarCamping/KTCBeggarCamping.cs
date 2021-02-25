@@ -1,4 +1,5 @@
-﻿using KTCHack.Core.GUI;
+﻿using KTCHack.Core.Attributes;
+using KTCHack.Core.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using UnityEngine;
 
 namespace KTCHack.Core.BeggarCamping
 {
+    [RequiredComponent]
     public class KTCBeggarCamping : MonoBehaviour
     {
         public static KTCBeggarCamping Instance;

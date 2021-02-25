@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Core\Age\KTCTechonology.cs" />
+    <Compile Include="Core\Attributes\RequiredComponent.cs" />
     <Compile Include="Core\BeggarCamping\KTCBeggarCamping.cs" />
     <Compile Include="Core\Enemy\KTCEnemyManager.cs" />
     <Compile Include="Core\Enemy\KTCEnemySpawner.cs" />

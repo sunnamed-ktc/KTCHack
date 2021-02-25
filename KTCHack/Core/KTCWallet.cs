@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KTCHack.Core.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using UnityEngine;
 
 namespace KTCHack.Core
 {
+    [RequiredComponent]
     public class KTCWallet : MonoBehaviour
     {
         public static Wallet Wallet;

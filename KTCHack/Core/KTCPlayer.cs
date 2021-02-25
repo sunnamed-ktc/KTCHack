@@ -1,4 +1,5 @@
-﻿using KTCHack.Core.GUI;
+﻿using KTCHack.Core.Attributes;
+using KTCHack.Core.GUI;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,6 +12,7 @@ using UnityEngine.Events;
 
 namespace KTCHack.Core
 {
+    [RequiredComponent]
     public class KTCPlayer : MonoBehaviour
     {
         public static Player Player;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KTCHack.Core.Attributes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +10,7 @@ using UnityEngine;
 
 namespace KTCHack.Core
 {
+    [RequiredComponent]
     public class KTCCastle : MonoBehaviour
     {
         public static Castle Castle;

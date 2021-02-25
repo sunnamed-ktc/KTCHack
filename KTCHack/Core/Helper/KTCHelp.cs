@@ -13,7 +13,7 @@ namespace KTCHack.Core.Helper
 
 
     #region Not using more, now its * KTCGUIMenu *
-    public class KTCHelp : MonoBehaviour
+    /*public class KTCHelp : MonoBehaviour
     {
         public static KTCHelp Instance;
 
@@ -45,13 +45,13 @@ namespace KTCHack.Core.Helper
             }
 
             #region Old realization
-            /*GUI.Label(new Rect(10, 10, 200, 40), Text[0]);
+            *//*GUI.Label(new Rect(10, 10, 200, 40), Text[0]);
             GUI.Label(new Rect(10, 30, 200, 40), Text[1]);
             GUI.Label(new Rect(10, 60, 200, 40), Text[2]);
-            GUI.Label(new Rect(10, 90, 200, 40), Text[3]);*/
+            GUI.Label(new Rect(10, 90, 200, 40), Text[3]);*//*
             #endregion
         }
-    }
+    }*/
     #endregion
 
 
